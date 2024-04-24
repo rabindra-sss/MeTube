@@ -15,12 +15,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+
 `;
 
 const Main = styled.div`
+  width: 100%;
   display: flex;
   /* flex: 7; */
   background-color: ${({ theme }) => theme.bg};
+  /* border: 2px solid black; */
+  position: relative;
+  
   /* height: 100vh; */
 `;
 const Wrapper = styled.div`

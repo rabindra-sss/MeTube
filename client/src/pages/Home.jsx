@@ -9,7 +9,7 @@ const Container = styled.div`
   justify-content: start;
   flex-wrap: wrap;
   gap: 1.5%;  
-  padding-left: 2%;
+  padding-left: 1%;
   
 `;
 // const config = {

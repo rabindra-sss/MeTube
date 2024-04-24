@@ -23,24 +23,37 @@ import { useSelector } from "react-redux";
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bgLighter};
-  height: 100vh;
+  margin-bottom: 0px;
+  /* border: 2px solid black; */
+  height: 98vh;
+  width: 40vh;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   
-  top: 0;
+  top: 2px;
   bottom:0;
 
   position: sticky;
+
 `;
 const Wrapper = styled.div`
-  padding: 18px 26px;
+  padding: 0px 26px;
+  position: relative;
+  height: 100%;
+  margin-bottom: 0;
+
+  overflow-y: auto;
+  scrollbar-color: var(--scrollbar) transparent;
+       
 `;
+
 const Logo = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
   font-weight: bold;
   margin-bottom: 25px;
+  
 `;
 
 const Img = styled.img`
@@ -182,14 +195,14 @@ const Menu = ({ darkMode, setDarkMode }) => {
           <FlagOutlinedIcon />
           Report
         </Item>
-        {/* <Item>
+        <Item>
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
         <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
-        </Item> */}
+        </Item>
       </Wrapper>
     </Container>
   );

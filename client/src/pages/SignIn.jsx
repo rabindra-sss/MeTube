@@ -16,6 +16,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 60vw;
   height: calc(100vh - 56px);
   color: ${({ theme }) => theme.text};
 `;
@@ -56,6 +57,7 @@ const Button = styled.button`
   cursor: pointer;
   background-color: ${({ theme }) => theme.soft};
   color: ${({ theme }) => theme.textSoft};
+  
 `;
 
 const More = styled.div`
@@ -133,7 +135,7 @@ const SignIn = () => {
       <Wrapper>
         <Title>Sign in</Title>
         <SubTitle>to continue to MeTube</SubTitle>
-        <Button onClick={signinwithGoogle}>Sign in with Google</Button>
+        <Button style={{backgroundColor: "#0d50e0", color: "white"}} onClick={signinwithGoogle}>Sign in with Google</Button>
         <Input placeholder="user Id" onChange={chaneUserId}/>
          <p style={{fontSize: '12px', color: "gray"}}>or</p>
         <Input placeholder="email" onChange={changeEmail}/>
