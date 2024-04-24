@@ -26,7 +26,7 @@ const Container = styled.div`
   margin-bottom: 0px;
   /* border: 2px solid black; */
   height: 98vh;
-  width: 40vh;
+  width: 40%;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   
@@ -34,10 +34,13 @@ const Container = styled.div`
   bottom:0;
 
   position: sticky;
-
+  
+  /* @media screen and (max-width: 400px) {
+    width: 30%;
+  } */
 `;
 const Wrapper = styled.div`
-  padding: 0px 26px;
+  padding: 0px 15px;
   position: relative;
   height: 100%;
   margin-bottom: 0;

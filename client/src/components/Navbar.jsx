@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0px 1%;
+  padding: 0px 2%;
   position: relative;
 
 `;
@@ -81,6 +81,11 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 5px;
+
+  @media screen and (max-width: 800px) {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
 `;
 
 const User = styled.div`

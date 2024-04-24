@@ -7,19 +7,22 @@ import { useEffect } from "react";
 import axios from 'axios'
 
 const Container = styled.div`
-  width: ${(props) => props.type !== "sm" && "360px"};
+  width: ${(props) => props.type !== "sm" && "360px"};    //360px
   margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
   display: ${(props) => props.type === "sm" && "flex"};
   gap: 10px;
   padding: 1%;
-
+  
+  @media screen and (max-width: 800px) {
+    width: ${(props) => props.type !== "sm" && "54vw"};
+  }
   
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: ${(props) => (props.type === "sm" ? "120px" : "202px")};
+  height: ${(props) => (props.type === "sm" ? "120px" : "202px")};  //120px : 202px
   background-color: #999;
   border-radius: 1cap;
   border: 1px solid ${({ theme }) => theme.soft};
@@ -27,6 +30,10 @@ const Image = styled.img`
 
   &:hover {
     border: ${({ theme }) => "1px solid green"};
+  }
+
+  @media screen and (max-width: 800px) {
+    height: ${(props) => (props.type === "sm" ? "18vw" : "30vw")};
   }
 `;
 
