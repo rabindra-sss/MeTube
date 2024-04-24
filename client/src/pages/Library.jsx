@@ -37,10 +37,10 @@ export default function Library() {
   useEffect(()=>{
     const fetchdata= async ()=>{
       //console.log('c1')
-      const res= await axios.get(`http://localhost:8800/api/video/your-videos`)
+      const res= await axios.get(`https://metube-1.onrender.com/api/video/your-videos`)
       //console.log(res.data)
 
-      // let response = await fetch('http://localhost:8800/api/video/random', {
+      // let response = await fetch('https://metube-1.onrender.com/api/video/random', {
       //       method: "GET",
       //       headers: {
       //           'Content-Type': 'application/json',

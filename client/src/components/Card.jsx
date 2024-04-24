@@ -81,7 +81,7 @@ const Card = ({ type, video }) => {
   useEffect(()=>{
     const fetchChannel= async ()=>{
       //console.log('2')
-      const res= await axios.get(`http://localhost:8800/api/user/find/${video.userId}`)
+      const res= await axios.get(`https://metube-1.onrender.com/api/user/find/${video.userId}`)
       setchannel(res.data);
     }
      

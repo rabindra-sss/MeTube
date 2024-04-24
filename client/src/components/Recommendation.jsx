@@ -21,7 +21,7 @@ export default function Recommendation({tags}) {
 
     useEffect(()=>{
         const fetchVideos = async()=>{
-            const res= await axios.get(`http://localhost:8800/api/video/tags?tags=${tags}`)
+            const res= await axios.get(`https://metube-1.onrender.com/api/video/tags?tags=${tags}`)
             setVideos(res.data);
         };
         fetchVideos();

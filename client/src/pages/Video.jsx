@@ -137,10 +137,10 @@ const Video = () => {
       
       try{
         
-        const videores= await axios.get(`http://localhost:8800/api/video/get/${videoId}`)
+        const videores= await axios.get(`https://metube-1.onrender.com/api/video/get/${videoId}`)
         dispatch(fetchSuccess(videores.data.video))
 
-        const channelres= await axios.get(`http://localhost:8800/api/user/find/${videores.data.video.userId}`)
+        const channelres= await axios.get(`https://metube-1.onrender.com/api/user/find/${videores.data.video.userId}`)
         
         setchannel(channelres.data)
 
@@ -164,13 +164,13 @@ const Video = () => {
       // unlike if already liked
      if(currentVideo.likes.includes(currentUser._id)) {
       dispatch(unlikeVideo(currentUser._id));
-      const res= await axios.put(`http://localhost:8800/api/user/unlike-video/${currentVideo._id}`,)
+      const res= await axios.put(`https://metube-1.onrender.com/api/user/unlike-video/${currentVideo._id}`,)
      }
      // otherwise like
       else{
         dispatch(likeVideo(currentUser._id));
         
-        const res= await axios.put(`http://localhost:8800/api/user/like-video/${currentVideo._id}`,)
+        const res= await axios.put(`https://metube-1.onrender.com/api/user/like-video/${currentVideo._id}`,)
 
         Subscribe.styled.button.color= 'gray';
       }
@@ -185,13 +185,13 @@ const Video = () => {
     // un-dislike if already disliked
     if(currentVideo.dislikes.includes(currentUser._id)) {
       dispatch(undislikeVideo(currentUser._id))
-      const res= await axios.put(`http://localhost:8800/api/user/undislike-video/${currentVideo._id}`,)
+      const res= await axios.put(`https://metube-1.onrender.com/api/user/undislike-video/${currentVideo._id}`,)
       
      }
      // otherwise dislike
       else{
         dispatch(dislikeVideo(currentUser._id))
-      const res= await axios.put(`http://localhost:8800/api/user/dislike-video/${currentVideo._id}`,)
+      const res= await axios.put(`https://metube-1.onrender.com/api/user/dislike-video/${currentVideo._id}`,)
       }
   }
 
@@ -199,14 +199,14 @@ const Video = () => {
     // subscribe if not in the list
     if(!currentUser?.subscribedChannels?.includes(channel._id)){
       dispatch(subscribe(channel._id))
-      const res= await axios.put(`http://localhost:8800/api/user/subscribe/${channel._id}`)
+      const res= await axios.put(`https://metube-1.onrender.com/api/user/subscribe/${channel._id}`)
       //  dispatch(loginSuccess(res.data.user));
     }
     // unsubscribe if already in the list
     else{
       dispatch(unsubscribe(channel._id))
       
-      const res= await axios.put(`http://localhost:8800/api/user/unsubscribe/${channel._id}`)
+      const res= await axios.put(`https://metube-1.onrender.com/api/user/unsubscribe/${channel._id}`)
       // dispatch(loginSuccess(res.data.user));
     }  
   }

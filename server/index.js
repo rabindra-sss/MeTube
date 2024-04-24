@@ -17,7 +17,7 @@ dotenv.config();
 const corsOptions = {
     // methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://legendary-bubblegum-6e6b31.netlify.app']
 
     // exposedHeaders: ["set-cookie"],
     ///..other options
@@ -49,6 +49,7 @@ app.use((err,req,res,next)=>{
         message,
     });
     //prod
+    
 })
 
 app.listen(8800,()=>{

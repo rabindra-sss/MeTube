@@ -19,7 +19,7 @@ export default function SearchPage() {
 
     useEffect(()=>{
         const fetchVideos = async()=>{
-            const res= await axios.get(`http://localhost:8800/api/video/search${query}`)
+            const res= await axios.get(`https://metube-1.onrender.com/api/video/search${query}`)
             setVideos(res.data);
         };
         fetchVideos();

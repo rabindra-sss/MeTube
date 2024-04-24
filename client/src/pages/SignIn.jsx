@@ -95,7 +95,7 @@ const SignIn = () => {
     e.preventDefault();
     dispatch(loginStart());
    try{
-     const res= await axios.post('http://localhost:8800/api/auth/signin', credentials);
+     const res= await axios.post('https://metube-1.onrender.com/api/auth/signin', credentials);
      //console.log(res.data)
      dispatch(loginSuccess(res.data.user));
      navigate('/');
@@ -113,7 +113,7 @@ const SignIn = () => {
     dispatch(loginStart());
     signInWithPopup(auth, provider)
     .then((result)=>{
-       axios.post('http://localhost:8800/api/auth/google',{
+       axios.post('https://metube-1.onrender.com/api/auth/google',{
         userName: result.user.displayName,
         email: result.user.email,
         img: result.user.photoURL,

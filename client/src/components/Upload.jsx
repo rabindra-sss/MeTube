@@ -251,7 +251,7 @@ new Promise((resolve, reject) => {
     if(videoURL) 
     {
       //console.log('hi')
-      const res= await axios.post('http://localhost:8800/api/video/create', videoData )
+      const res= await axios.post('https://metube-1.onrender.com/api/video/create', videoData )
 
     setOpen(false);
     

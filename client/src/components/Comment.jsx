@@ -42,7 +42,7 @@ const Comment = ({comment}) => {
   const [channel, setchannel]= useState({});
   useEffect(()=>{
     const fetchdata = async()=>{
-      const res = await axios.get(`http://localhost:8800/api/user/find/${comment.userId}`)
+      const res = await axios.get(`https://metube-1.onrender.com/api/user/find/${comment.userId}`)
       setchannel(res.data)
     }
     fetchdata();

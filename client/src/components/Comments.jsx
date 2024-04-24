@@ -52,14 +52,14 @@ const Comments = () => {
 
   useEffect(()=>{
     const fetchcomments= async ()=>{
-      const res= await axios.get(`http://localhost:8800/api/comment/${currentVideo._id}`)
+      const res= await axios.get(`https://metube-1.onrender.com/api/comment/${currentVideo._id}`)
       setcomments(res.data.comments);
     }
     fetchcomments();
   },[currentVideo]);
 
   const handleComment = async()=>{
-    const res= await axios.post(`http://localhost:8800/api/comment/`, {userId: currentUser, videoId: currentVideo, content: comment})
+    const res= await axios.post(`https://metube-1.onrender.com/api/comment/`, {userId: currentUser, videoId: currentVideo, content: comment})
     const newcomment = res.data;
     setcomments([...comments , newcomment]);
   }
