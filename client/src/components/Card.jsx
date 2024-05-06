@@ -61,24 +61,33 @@ const ChannelImage = styled.img`
 const Texts = styled.div``;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: calc(.6em + 0.7vw );
   font-weight: 500;
   color: ${({ theme }) => theme.text};
   &:hover {
     color: ${({ theme }) => {if(theme.text=="white") return "#b4f8b4"
       return "#045a04";
      }};
+     
+  @media screen and (min-width: 800px) {
+    font-size: 14px;
+  }
 }
 `;
 
 const ChannelName = styled.h2`
-  font-size: 14px;
+  font-size: calc(.5em + 0.6vw );
+
   color: ${({ theme }) => theme.textSoft};
   margin: 9px 0px;
+
+  @media screen and (min-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 const Info = styled.div`
-  font-size: 14px;
+  font-size: calc(.4em + 0.4vw);
   color: ${({ theme }) => theme.textSoft};
 `;
 

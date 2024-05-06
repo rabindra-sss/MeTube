@@ -26,7 +26,7 @@ const Container = styled.div`
   margin-bottom: 0px;
   /* border: 2px solid black; */
   height: 98vh;
-  width: 40%;
+  width: 40vw;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   
@@ -40,14 +40,17 @@ const Container = styled.div`
   } */
 `;
 const Wrapper = styled.div`
-  padding: 0px 15px;
+  padding: 0px 5%;
   position: relative;
   height: 100%;
+  width: 100%;
+  
   margin-bottom: 0;
 
   overflow-y: auto;
   scrollbar-color: var(--scrollbar) transparent;
-       
+  
+  font-size: calc(.6em + 0.5vw);
 `;
 
 const Logo = styled.div`
