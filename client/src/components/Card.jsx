@@ -65,13 +65,13 @@ const Title = styled.h1`
   font-weight: 500;
   color: ${({ theme }) => theme.text};
   &:hover {
-    color: ${({ theme }) => {if(theme.text=="white") return "#b4f8b4"
+    color: ${({ theme }) => {if(theme.text==="white") return "#b4f8b4"
       return "#045a04";
      }};
      
-  @media screen and (min-width: 800px) {
+  /* @media screen and (min-width: 800px) {
     font-size: 14px;
-  }
+  } */
 }
 `;
 

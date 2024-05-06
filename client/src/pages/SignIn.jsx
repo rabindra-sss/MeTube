@@ -16,9 +16,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60vw;
+  width: 75vw;
   height: calc(100vh - 56px);
   color: ${({ theme }) => theme.text};
+  /* border: 1px solid black; */
 `;
 
 const Wrapper = styled.div`

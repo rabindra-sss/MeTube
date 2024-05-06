@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import axios from 'axios'
 const Container = styled.div`
   display: flex;
+  width: 100%;
+  /* border: 1px solid; */
   justify-content: start;
   flex-wrap: wrap;
   gap: 1.5%;  
@@ -23,6 +25,7 @@ const config = {
 }
 const Home = ({type}) => {
   const [videos, setvideos]= useState([]);
+  const [isData, setIsData] = useState([false]);
   
   useEffect(()=>{
     const fetchdata= async ()=>{
@@ -42,13 +45,14 @@ const Home = ({type}) => {
     }
     
     fetchdata();
+    if(videos) setIsData(true);
     
   },[type])
   
   return (
     <Container>
       {videos.map((video)=>(<Card key={video._id} video={video}></Card>))}
-      
+      {!isData && <h4>Fetching Latest Data</h4>}
     </Container>
   );
 };

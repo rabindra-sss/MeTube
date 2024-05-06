@@ -19,12 +19,12 @@ const Container = styled.div`
 `;
 
 const Main = styled.div`
-  width: 100vw;
+  width: 98.9vw;
   margin-right: 0px;
   display: flex;
   /* flex: 7; */
   background-color: ${({ theme }) => theme.bg};
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: relative;
   
   /* height: 100vh; */

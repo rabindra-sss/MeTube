@@ -26,29 +26,30 @@ const Container = styled.div`
   margin-bottom: 0px;
   /* border: 2px solid black; */
   height: 98vh;
-  width: 40vw;
+  width: 10vw !important;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   
   top: 2px;
   bottom:0;
-
   position: sticky;
   
   /* @media screen and (max-width: 400px) {
     width: 30%;
   } */
 `;
+
 const Wrapper = styled.div`
-  padding: 0px 5%;
-  position: relative;
+  padding: 0px 7%;
+  position: relative; 
   height: 100%;
   width: 100%;
   
   margin-bottom: 0;
-
+  
   overflow-y: auto;
-  scrollbar-color: var(--scrollbar) transparent;
+  /* scrollbar-color: var(--scrollbar) transparent; */
+  scrollbar-width: thin;
   
   font-size: calc(.6em + 0.5vw);
 `;
@@ -75,7 +76,7 @@ const Item = styled.div`
   padding: 7.5px 0px;
   
   &:hover {
-    background-color:  ${({ theme }) => {if(theme.text=="white") return  "green"
+    background-color:  ${({ theme }) => {if(theme.text==="white") return  "green"
       return "#b4f8b4";
      }};
   }
@@ -88,6 +89,7 @@ const Hr = styled.hr`
 `;
 
 const Login = styled.div``;
+
 const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
@@ -95,17 +97,21 @@ const Button = styled.button`
   color: #5df05d;
   border-radius: 3px;
   font-weight: 500;
-  margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 5px;
+
+  @media screen and (max-width: 800px) {
+    padding: 1px 3px;
+    font-size: 12px;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 14px;
   font-weight: 500;
-  color: ${({ theme }) => {if(theme.text=="white") return  "green"
+  color: ${({ theme }) => {if(theme.text==="white") return  "green"
       return "#10a210";
      }};
   margin-bottom: 20px;

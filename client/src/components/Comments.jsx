@@ -4,6 +4,7 @@ import Comment from "./Comment";
 import { useSelector } from "react-redux";
 import axios from 'axios'
 import avatarimg from '../img/image.png'
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -50,6 +51,7 @@ const Comments = () => {
   const [comments, setcomments]= useState([]);
   const [comment, setcomment] = useState(null);
 
+  const navigate= useNavigate();
   useEffect(()=>{
     const fetchcomments= async ()=>{
       const res= await axios.get(`https://metube-1.onrender.com/api/comment/${currentVideo._id}`)
@@ -70,7 +72,8 @@ const Comments = () => {
       <NewComment>
         <Avatar src={currentUser ? currentUser.img : avatarimg} />
         <Input type="text" placeholder="Add a comment..." onChange={(e)=>setcomment(e.target.value)}/>
-        {comment && <Button onClick={handleComment} >Post</Button>}
+        {comment && currentUser && <Button onClick={handleComment} >Post</Button>}
+        {comment && (!currentUser) && <Button  >Sign in to Comment</Button>}
       </NewComment>
       {
         comments.map((comment)=>{
