@@ -17,7 +17,7 @@ dotenv.config();
 const corsOptions = {
     // methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-    origin: ['http://localhost:3000', 'https://legendary-bubblegum-6e6b31.netlify.app', 'https://exquisite-zuccutto-b6a4cc.netlify.app']
+    origin: ['http://localhost:3000', 'https://legendary-bubblegum-6e6b31.netlify.app', 'https://663aa3c5b2d1c26af5217756--exquisite-zuccutto-b6a4cc.netlify.app']
 
     // exposedHeaders: ["set-cookie"],
     ///..other options
