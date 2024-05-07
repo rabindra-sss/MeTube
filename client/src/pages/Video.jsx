@@ -16,6 +16,7 @@ import { fetchStart, fetchSuccess, likeVideo, unlikeVideo, dislikeVideo, undisli
 import { format } from "timeago.js";
 import { loginStart, loginSuccess, subscribe, unsubscribe } from "../redux/UserSlice";
 import Recommendation from "../components/Recommendation";
+import VideoPlayer from "../components/VideoPlayer";
 
 const Container = styled.div`
   display: flex;
@@ -116,7 +117,6 @@ const VideoFrame= styled.video`
  max-height: '720px';
  width: 100%;
  object-fit: cover;
- 
 `
 const Video = () => {
   const {currentUser}= useSelector((state)=>state.user);
@@ -216,8 +216,8 @@ const Video = () => {
     <Container>
       <Content>
         <VideoWrapper>
-          <VideoFrame id='video' src= {currentVideo.videoURL} poster={currentVideo.thumbnail} controls >
-          </VideoFrame>
+          <VideoPlayer id='videoplayer' videoURL= {currentVideo.videoURL} thumbnail={currentVideo.thumbnail} >
+          </VideoPlayer>
         </VideoWrapper>
         <Title>{currentVideo.title}</Title>
         <Details>
